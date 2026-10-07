@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Organizer Requests - Event Valley</title>
+    <link rel="stylesheet" href="../../css/dashboard.css">
+</head>
+<body>
+<div class="dashboard">
+
+    <aside class="sidebar">
+        <h2>Event Valley</h2>
+        <ul>
+            <li onclick="window.location.href='faculty_dash.html'">Dashboard</li>
+            <li onclick="window.location.href='event_req.html'">Event Requests</li>
+            <li class="active" onclick="window.location.href='org_request.html'">Organizer Requests</li>
+            <li onclick="window.location.href='notifications.html'">Notifications</li>
+        </ul>
+        <button class="logout-btn" onclick="logout()">🚪 Logout</button>
+    </aside>
+
+    <main class="main-content">
+        <div class="header">
+            <h2>Organizer Role Requests</h2>
+        </div>
+        <div id="requestList" class="event-list"></div>
+    </main>
+</div>
+<script src="../../js/notifications_helper.js"></script>
+<script src="../../js/faculty/org_request.js"></script>
+</body>
+</html>

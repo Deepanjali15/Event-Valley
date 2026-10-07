@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Explore Events - Event Valley</title>
+    <link rel="stylesheet" href="../../css/dashboard.css">
+</head>
+<body>
+<div class="dashboard">
+
+    <aside class="sidebar">
+        <h2>Event Valley</h2>
+        <ul>
+            <li onclick="window.location.href='student_dash.html'">Dashboard</li>
+            <li onclick="window.location.href='my_events.html'">My Events</li>
+            <li class="active">Explore Events</li>
+            <li onclick="window.location.href='notifications.html'">Notifications</li>
+
+            <li onclick="window.location.href='request_org.html'">Request Organizer</li>
+        </ul>
+        <button class="logout-btn" onclick="logout()">🚪 Logout</button>
+    </aside>
+
+    <main class="main-content">
+        <div class="header">
+            <h2>Explore Events</h2>
+        </div>
+
+        <div style="display:flex;gap:10px;margin:16px 0;flex-wrap:wrap;">
+            <button class="btn-primary" id="btn-All"       onclick="filterBy('All')">All</button>
+            <button class="btn-outline" id="btn-Technical" onclick="filterBy('Technical')">Technical</button>
+            <button class="btn-outline" id="btn-Cultural"  onclick="filterBy('Cultural')">Cultural</button>
+            <button class="btn-outline" id="btn-Sports"    onclick="filterBy('Sports')">Sports</button>
+            <button class="btn-outline" id="btn-Workshop"  onclick="filterBy('Workshop')">Workshop</button>
+            <button class="btn-outline" id="btn-Arts"      onclick="filterBy('Arts')">Arts</button>
+        </div>
+
+        <div id="eventsContainer" class="events-grid"></div>
+    </main>
+</div>
+<script src="../../js/notifications_helper.js"></script>
+<script src="../../js/student/events.js"></script>
+</body>
+</html>

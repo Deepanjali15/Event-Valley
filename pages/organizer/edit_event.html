@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Edit Event - Event Valley</title>
+    <link rel="stylesheet" href="../../css/dashboard.css">
+</head>
+<body>
+<div class="dashboard">
+
+    <aside class="sidebar">
+        <h2>Event Valley</h2>
+        <ul>
+            <li onclick="window.location.href='organizer_dash.html'">Dashboard</li>
+            <li onclick="window.location.href='create_event.html'">Create Event</li>
+            <li class="active" onclick="window.location.href='my_org_events.html'">My Events</li>
+            <li onclick="window.location.href='notifications.html'">Notifications</li>
+        </ul>
+        <button class="logout-btn" onclick="logout()">🚪 Logout</button>
+    </aside>
+
+    <main class="main-content">
+        <h2>Edit Event</h2>
+        <p style="color:#888;margin-bottom:16px;font-size:14px;">Saving resets approval status to pending.</p>
+
+        <form id="editForm" class="event-form">
+            <input type="text" id="name" placeholder="Event Name" required>
+
+            <select id="type" required>
+                <option value="">-- Select Event Type --</option>
+                <option value="Technical">Technical</option>
+                <option value="Cultural">Cultural</option>
+                <option value="Sports">Sports</option>
+                <option value="Workshop">Workshop</option>
+                <option value="Seminar">Seminar</option>
+                <option value="Arts">Arts</option>
+                <option value="Other">Other</option>
+            </select>
+
+            <input type="text"  id="venue"       placeholder="Venue"       required>
+            <input type="date"  id="date"        required>
+            <input type="time"  id="time"        required>
+            <textarea           id="description" placeholder="Description"></textarea>
+            <input type="number" id="budget"     placeholder="Estimated Budget (₹)" min="0">
+            <input type="text"   id="coordinator" placeholder="Coordinator Name">
+            <textarea id="equipment" placeholder="Equipment / Resources Required" style="height:70px;"></textarea>
+
+            <div style="display:flex;gap:10px;">
+                <button type="button" class="btn-outline" onclick="window.location.href='my_org_events.html'" style="flex:1;">Cancel</button>
+                <button type="submit" class="btn-primary" style="flex:2;">Save &amp; Resubmit</button>
+            </div>
+        </form>
+    </main>
+</div>
+<script src="../../js/organizer/edit_event.js"></script>
+</body>
+</html>

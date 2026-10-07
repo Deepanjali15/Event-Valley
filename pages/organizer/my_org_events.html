@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>My Events - Event Valley</title>
+    <link rel="stylesheet" href="../../css/dashboard.css">
+</head>
+<body>
+<div class="dashboard">
+
+    <aside class="sidebar">
+        <h2>Event Valley</h2>
+        <ul>
+            <li onclick="window.location.href='organizer_dash.html'">Dashboard</li>
+            <li onclick="window.location.href='create_event.html'">Create Event</li>
+            <li class="active">My Events</li>
+            <li onclick="window.location.href='notifications.html'">Notifications</li>
+        </ul>
+        <button class="logout-btn" onclick="logout()">🚪 Logout</button>
+    </aside>
+
+    <main class="main-content">
+        <div class="header">
+            <h2>My Events</h2>
+            <button class="btn-primary" onclick="window.location.href='create_event.html'">+ Create Event</button>
+        </div>
+
+        <div style="display:flex;gap:10px;margin:16px 0;">
+            <button class="btn-primary"  id="btn-all"      onclick="filterBy('all')">All</button>
+            <button class="btn-outline"  id="btn-draft"    onclick="filterBy('draft')">Drafts</button>
+            <button class="btn-outline"  id="btn-pending"  onclick="filterBy('pending')">Pending</button>
+            <button class="btn-outline"  id="btn-approved" onclick="filterBy('approved')">Approved</button>
+            <button class="btn-outline"  id="btn-rejected" onclick="filterBy('rejected')">Rejected</button>
+        </div>
+
+        <div id="eventList" class="event-list"></div>
+        <div id="participantModal" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,0.4);z-index:100;align-items:center;justify-content:center;">
+            <div style="background:white;border-radius:16px;padding:25px;max-width:500px;width:90%;max-height:80vh;overflow-y:auto;">
+                <h3 id="participantTitle"></h3>
+                <div id="participantList" style="margin-top:15px;"></div>
+
+                <button class="btn-outline" style="margin-top:15px;" onclick="closeParticipantModal()">Close</button>
+            </div>
+        </div>
+    </main>
+</div>
+
+<script src="../../js/organizer/my_org_events.js"></script>
+</body>
+</html>

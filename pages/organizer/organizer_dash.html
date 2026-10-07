@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Organizer Dashboard - Event Valley</title>
+    <link rel="stylesheet" href="../../css/dashboard.css">
+</head>
+<body>
+<div class="dashboard">
+
+    <aside class="sidebar">
+        <h2>Event Valley</h2>
+        <ul>
+            <li class="active" onclick="window.location.href='organizer_dash.html'">Dashboard</li>
+            <li onclick="window.location.href='create_event.html'">Create Event</li>
+            <li onclick="window.location.href='my_org_events.html'">My Events</li>
+            <li onclick="window.location.href='notifications.html'">Notifications</li>
+        </ul>
+        <button class="logout-btn" onclick="logout()">🚪 Logout</button>
+    </aside>
+
+    <main class="main-content">
+
+        <div class="header">
+            <h2 id="welcomeText">Welcome Organizer</h2>
+            <button class="btn-primary" onclick="window.location.href='create_event.html'">+ Create Event</button>
+        </div>
+
+        <div class="stats">
+            <div class="card">
+                <h3>Total Events</h3>
+                <p id="totalEvents">0</p>
+            </div>
+            <div class="card">
+                <h3>Approved</h3>
+                <p id="approvedEvents">0</p>
+            </div>
+            <div class="card">
+                <h3>Pending</h3>
+                <p id="pendingEvents">0</p>
+            </div>
+        </div>
+
+        <div class="events-section">
+            <h3>My Organized Events</h3>
+            <div id="eventList" class="event-list"></div>
+        </div>
+
+    </main>
+</div>
+<script src="../../js/organizer/organizer_dash.js"></script>
+</body>
+</html>

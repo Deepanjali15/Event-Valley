@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Signup - Event Valley</title>
+    <link rel="stylesheet" href="css/landing.css">
+</head>
+<body>
+    <div class="login-container">
+        <h2>Create Account</h2>
+
+        <div class="role-select">
+            <button class="role-btn active" data-role="student">Student</button>
+            <button class="role-btn" data-role="organizer">Organizer</button>
+            <button class="role-btn" data-role="faculty">Faculty</button>
+        </div>
+
+        <form id="signupForm">
+            <input type="email" id="email" placeholder="Enter Email" required>
+
+            <input type="text" id="extraField" placeholder="RA Number / Faculty ID">
+
+            <input type="password" id="password" placeholder="Create Password" required>
+
+            <button type="submit" class="btn-primary">Sign Up</button>
+        </form>
+
+        <p style="margin-top:10px;font-size:13px;">
+            Already have an account?
+            <a href="login.html">Login</a>
+        </p>
+    </div>
+
+    <script src="js/signup.js"></script>
+</body>
+</html>

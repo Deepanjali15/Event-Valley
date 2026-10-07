@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Valley</title>
+    <link rel="stylesheet" href="css/landing.css">
+</head>
+<body>
+    <header class="navbar">
+        <div class="logo">Event Valley</div>
+        <nav class="nav-links">
+            <a href="pages/student/events.html">Events</a>
+            <a href="#">Clubs</a>
+            <a href="#">Organize</a>
+        </nav>
+        <div class="nav-right">
+            <button class="btn-outline" onclick="window.location.href='login.html'">Sign In</button>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Discover <br>Everything Happening <br>On Campus</h1>
+            <p>The ultimate college event management system to stay connected.
+            Never miss a workshop, tech fest, cultural night, or seminar again.</p>
+            <div class="hero-buttons">
+                <button class="btn-outline" onclick="window.location.href='signup.html'">Sign Up</button>
+                <button class="btn-primary" onclick="window.location.href='login.html'">Get Started</button>
+                <button class="btn-secondary" onclick="window.location.href='pages/student/events.html'">Explore Events</button>
+            </div>
+        </div>
+    </section>
+
+    <section class="features">
+        <h2>Streamline Campus Life</h2>
+        <p class="feature-subtext">Powerful tools designed specifically for student organizations and admins.</p>
+        <div class="feature-container">
+            <div class="feature-card">
+                <h3>Real-time Updates</h3>
+                <p>Stay updated with instant notifications for schedule changes.</p>
+            </div>
+            <div class="feature-card">
+                <h3>Smart Ticketing</h3>
+                <p>Seamless registration with integrated student authentication.</p>
+            </div>
+            <div class="feature-card">
+                <h3>Club Dashboard</h3>
+                <p>Manage events, track members, and view analytics easily.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <h3>Event Valley</h3>
+        <p>The unified platform for SRM campus engagement.</p>
+        <p>© 2026 Event Valley. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Seed demo data on first load
+        if (!localStorage.getItem("events")) {
+            const demoEvents = [
+                { id: 1, name: "Tech Fest 2026", type: "Technical", venue: "Main Auditorium", date: "2026-04-10", time: "10:00", description: "Annual technology festival with competitions and workshops.", status: "approved", createdBy: "org@test.com" },
+                { id: 2, name: "Cultural Night", type: "Cultural", venue: "Open Air Theatre", date: "2026-04-15", time: "18:00", description: "A night of music, dance and cultural performances.", status: "approved", createdBy: "org@test.com" },
+                { id: 3, name: "AI Workshop", type: "Workshop", venue: "Lab Block 3", date: "2026-04-20", time: "14:00", description: "Hands-on workshop on machine learning basics.", status: "pending", createdBy: "org@test.com" },
+                { id: 4, name: "Sports Meet", type: "Sports", venue: "Sports Ground", date: "2026-04-25", time: "08:00", description: "Inter-department sports competition.", status: "approved", createdBy: "org@test.com" }
+            ];
+            localStorage.setItem("events", JSON.stringify(demoEvents));
+        }
+        if (!localStorage.getItem("registrations")) {
+            localStorage.setItem("registrations", JSON.stringify([]));
+        }
+        if (!localStorage.getItem("orgRequests")) {
+            localStorage.setItem("orgRequests", JSON.stringify([]));
+        }
+    </script>
+</body>
+</html>

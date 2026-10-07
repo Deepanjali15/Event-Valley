@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Faculty Dashboard - Event Valley</title>
+    <link rel="stylesheet" href="../../css/dashboard.css">
+</head>
+<body>
+<div class="dashboard">
+
+    <aside class="sidebar">
+        <h2>Event Valley</h2>
+        <ul>
+            <li class="active">Dashboard</li>
+            <li onclick="window.location.href='event_req.html'">Event Requests</li>
+            <li onclick="window.location.href='org_request.html'">Organizer Requests</li>
+            <li onclick="window.location.href='notifications.html'">Notifications</li>
+        </ul>
+        <button class="logout-btn" onclick="logout()">🚪 Logout</button>
+    </aside>
+
+    <main class="main-content">
+
+        <div class="header">
+            <h2>Faculty Dashboard</h2>
+            <span id="userEmail" style="color:#888;font-size:14px;"></span>
+        </div>
+
+        <div class="stats">
+            <div class="card"><h3>Total</h3><p id="totalRequests">0</p></div>
+            <div class="card"><h3>Pending</h3><p id="pendingCount">0</p></div>
+            <div class="card"><h3>Approved</h3><p id="approvedCount">0</p></div>
+            <div class="card"><h3>Revision</h3><p id="revisionCount">0</p></div>
+            <div class="card"><h3>Rejected</h3><p id="rejectedCount">0</p></div>
+        </div>
+
+        <div class="events-section">
+            <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;">
+                <h3>Recent Event Requests</h3>
+                <button class="btn-primary" onclick="window.location.href='event_req.html'">Review All →</button>
+            </div>
+            <div id="recentList" class="event-list"></div>
+        </div>
+
+        <div class="events-section" style="margin-top:30px;">
+            <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;">
+                <h3>Organizer Requests</h3>
+                <button class="btn-primary" onclick="window.location.href='org_request.html'">Review All →</button>
+            </div>
+            <div id="orgList" class="event-list"></div>
+        </div>
+        <div class="events-section" style="margin-top:30px;">
+            <h3>Event Reports</h3>
+            <div id="reportList" class="event-list"></div>
+        </div>
+
+    </main>
+</div>
+<script src="../../js/faculty/faculty_dash.js"></script>
+</body>
+</html>

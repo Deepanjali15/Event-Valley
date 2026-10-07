@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Notifications – Event Valley</title>
+    <link rel="stylesheet" href="../../css/dashboard.css">
+</head>
+<body>
+<div class="dashboard">
+
+    <aside class="sidebar">
+        <h2>Event Valley</h2>
+        <ul>
+            <li onclick="window.location.href='organizer_dash.html'">Dashboard</li>
+            <li onclick="window.location.href='create_event.html'">Create Event</li>
+            <li onclick="window.location.href='my_org_events.html'">My Events</li>
+            <li class="active">
+                Notifications
+                <span id="notifBadge" style="
+                    display:none;
+                    background:#ef4444;
+                    color:#fff;
+                    border-radius:50%;
+                    font-size:11px;
+                    padding:1px 6px;
+                    margin-left:6px;
+                    font-weight:700;
+                "></span>
+            </li>
+        </ul>
+        <button class="logout-btn" onclick="logout()">🚪 Logout</button>
+    </aside>
+
+    <main class="main-content">
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:16px;">
+            <h2 style="margin:0;">Notifications</h2>
+            <button class="btn-outline" onclick="markAllRead()" style="font-size:13px;">
+                ✓ Mark all as read
+            </button>
+        </div>
+        <div id="notifList"></div>
+    </main>
+
+</div>
+
+<script src="../../js/notifications_helper.js"></script>
+<script src="../../js/notifications.js"></script>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Request Organizer - Event Valley</title>
+    <link rel="stylesheet" href="../../css/dashboard.css">
+</head>
+<body>
+<div class="dashboard">
+
+    <aside class="sidebar">
+        <h2>Event Valley</h2>
+        <ul>
+            <li onclick="window.location.href='student_dash.html'">Dashboard</li>
+            <li onclick="window.location.href='my_events.html'">My Events</li>
+            <li onclick="window.location.href='events.html'">Explore Events</li>
+            <li class="active" onclick="window.location.href='request_org.html'">Request Organizer</li>
+        </ul>
+        <button class="logout-btn" onclick="logout()">🚪 Logout</button>
+    </aside>
+
+    <main class="main-content">
+        <div class="header">
+            <h2>Request Organizer Role</h2>
+        </div>
+
+        <div class="request-form-wrap">
+            <p style="color:#666;margin-bottom:20px;font-size:14px;">
+                Want to organize events on campus? Submit a request and a faculty advisor will review it.
+            </p>
+
+            <div id="statusMsg"></div>
+
+            <form id="requestForm">
+                <select id="clubSelect" required>
+                    <option value="">-- Select a Club --</option>
+                    <option value="Tech Club">Tech Club</option>
+                    <option value="Cultural Club">Cultural Club</option>
+                    <option value="Sports Club">Sports Club</option>
+                    <option value="Science Club">Science Club</option>
+                    <option value="Arts Club">Arts Club</option>
+                </select>
+                <textarea id="reason" placeholder="Why do you want to become an organizer?" required></textarea>
+                <button type="submit" class="btn-primary" style="width:100%;">Submit Request</button>
+            </form>
+        </div>
+    </main>
+</div>
+<script src="../../js/notifications_helper.js"></script>
+<script src="../../js/student/request_org.js"></script>
+</body>
+</html>

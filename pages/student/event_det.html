@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Event Details - Event Valley</title>
+    <link rel="stylesheet" href="../../css/dashboard.css">
+</head>
+<body>
+<div class="dashboard">
+
+    <aside class="sidebar">
+        <h2>Event Valley</h2>
+        <ul>
+            <li onclick="window.location.href='student_dash.html'">Dashboard</li>
+            <li onclick="window.location.href='my_events.html'">My Events</li>
+            <li class="active" onclick="window.location.href='events.html'">Explore Events</li>
+            <li onclick="window.location.href='request_org.html'">Request Organizer</li>
+        </ul>
+        <button class="logout-btn" onclick="logout()">🚪 Logout</button>
+    </aside>
+
+    <main class="main-content">
+        <div id="eventDetails" class="event-details"></div>
+    </main>
+</div>
+<script src="../../js/notifications_helper.js"></script>
+<script src="../../js/student/event_det.js"></script>
+</body>
+</html>
